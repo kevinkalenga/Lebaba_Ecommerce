@@ -2,7 +2,8 @@ import Banner from './Banner';
 import Categories from './Categories';
 import HeroSection from './HeroSection';
 import TrendingProducts from '../shop/TrendingProducts';
-import DealsSection from './DealsSection'
+import DealsSection from './DealsSection';
+import PromoBanner from './PromoBanner'
 
 const Home = () => {
     return (
@@ -12,6 +13,7 @@ const Home = () => {
             <HeroSection />
             <TrendingProducts />
             <DealsSection />
+            <PromoBanner />
         </>
     )
 }
