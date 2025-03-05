@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
-import RatingStars from '../../components/RatingStars'
+import RatingStars from '../../components/RatingStars';
+
 
 const ProductCards = ({ products }) => {
     console.log(products)
@@ -17,7 +18,7 @@ const ProductCards = ({ products }) => {
                             </Link>
                             <div className='hover:block absolute top-3 right-3'>
                                 <button>
-                                    <i class="ri-shopping-cart-2-line bg-primary p-1.5
+                                    <i className="ri-shopping-cart-2-line bg-primary p-1.5
                                    text-white hover:bg-primary-dark"></i>
                                 </button>
                             </div>
