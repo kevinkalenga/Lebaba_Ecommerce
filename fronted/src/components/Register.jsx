@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { useRegisterUserMutation } from '../redux/features/auth/authApi'
 
 
 const Register = () => {
@@ -7,8 +8,10 @@ const Register = () => {
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const navigate = useNavigate();
 
 
+    const [registerUser, { isLoading }] = useRegisterUserMutation()
 
 
     const handleRegister = async (e) => {
@@ -18,7 +21,16 @@ const Register = () => {
             email,
             password
         }
-        console.log(data)
+        // console.log(data)
+
+        try {
+            await registerUser(data).unwrap();
+            // console.log(response)
+            alert("Registration successful");
+            navigate('/login')
+        } catch (error) {
+            setMessage("Registration failed")
+        }
 
     }
     return (
