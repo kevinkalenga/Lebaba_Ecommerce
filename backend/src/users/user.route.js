@@ -1,6 +1,6 @@
 const express = require('express');
 const User = require("./user.model");
-const generateToken = require('../middleware/generateToken')
+const generateToken = require('../middleware/generateToken');
 const router = express.Router();
 
 // Register endpoint
@@ -56,6 +56,8 @@ router.post("/login", async (req, res) => {
         res.status(500).send({ message: "Error logged in user" });
     }
 });
+
+
 
 
 
