@@ -7,6 +7,7 @@ const authApi = createApi({
         baseUrl: `${getBaseUrl()}/api/auth`,
         credentials: 'include',
     }),
+    tagTypes: ["User"],
     // mutation if you want to push something in the backend and query if you want to get something in the backend
     endpoints: (builder) => ({
         registerUser: builder.mutation({
