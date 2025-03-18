@@ -3,6 +3,7 @@ import RatingStars from '../../../components/RatingStars';
 import { useFetchProductByIdQuery } from "../../../redux/features/products/productsApi"
 import { useDispatch } from 'react-redux';
 import { addToCart } from '../../../redux/features/cart/cartSlice';
+import ReviewsCard from "../reviews/ReviewsCard"
 
 const SingleProduct = () => {
 
@@ -79,7 +80,7 @@ const SingleProduct = () => {
 
             {/* display Reviews */}
             <section className='section__container mt-8'>
-                Reviews Here
+                <ReviewsCard productReviews={productReviews} />
             </section>
         </>
 
