@@ -23,7 +23,8 @@ const productSchema = new mongoose.Schema({
         ref: "User",
         required: true
     }
-})
+}, { timestamps: true }
+)
 
 const Products = mongoose.model("Product", productSchema);
 
