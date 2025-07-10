@@ -1,5 +1,5 @@
 import { Link, NavLink, useNavigate } from "react-router-dom"
-import { useLoginUserMutation, useLogoutUserMutation } from '../../redux/features/auth/authApi'
+import {useLogoutUserMutation } from '../../redux/features/auth/authApi'
 import { useDispatch } from 'react-redux'
 import { logout } from '../../redux/features/auth/authSlice'
 
