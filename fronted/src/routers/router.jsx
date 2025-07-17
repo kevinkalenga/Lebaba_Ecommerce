@@ -15,6 +15,7 @@ import UserOrders from "../pages/dashboard/user/UserOrders";
 import OrderDetails from "../pages/dashboard/user/OrderDetails";
 import UserPayments from "../pages/dashboard/user/UserPayments";
 import UserReviews from "../pages/dashboard/user/UserReviews";
+import UserProfile from "../pages/dashboard/user/UserProfile";
 const router = createBrowserRouter([
     {
         path: "/",
@@ -53,7 +54,7 @@ const router = createBrowserRouter([
             {path: '', element: <UserDMain />},
             {path: 'orders', element:  <UserOrders/> },
             {path: 'payments', element: <UserPayments />},
-            {path: 'profile', element: <div>User Profile</div>},
+            {path: 'profile', element: <UserProfile />},
             {path: 'reviews', element:  <UserReviews/>},
 
             // admin routes and include role field
