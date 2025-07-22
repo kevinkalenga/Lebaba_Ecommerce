@@ -20,6 +20,9 @@ app.use(cors({
     credentials: true
 }))
 
+// image upload 
+const uploadImage = require("./src/utils/uploadImage")
+
 // all routes
 
 const authRoutes = require('./src/users/user.route');
@@ -48,6 +51,14 @@ async function main() {
         res.send('Hello World!')
     })
 }
+
+
+app.post("/uploadImage", (req, res) => {
+  uploadImage(req.body.image)
+    .then((url) => res.send(url))
+    .catch((err) => res.status(500).send(err));
+});
+
 
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}!!!`)
