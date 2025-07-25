@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
-import { useUpdateUerRoleMutation } from '../../../../redux/features/auth/authApi';
+import { useUpdateUserRoleMutation } from '../../../../redux/features/auth/authApi';
 
 const UpdateUserModal = ({ user, onClose, onRoleUpdate }) => {
     const [role, setRole] = useState(user.role);
 
-    const [updateUerRole] = useUpdateUerRoleMutation()
+    const [updateUserRole] = useUpdateUserRoleMutation()
     const handleUpdateRole = async () => {
         try {
-            await updateUerRole({ userId: user?._id, role }).unwrap();
+            await updateUserRole({ userId: user?._id, role }).unwrap();
             alert('Updated role successfully!')
             onRoleUpdate();
             onClose();
